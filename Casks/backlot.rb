@@ -18,9 +18,10 @@ cask "backlot" do
   ]
 
   caveats <<~EOS
-    Backlot is not signed or notarized. If macOS blocks the first launch,
-    install with --no-quarantine or use Open Anyway in System Settings >
-    Privacy & Security after the first attempt.
+    Backlot is not signed or notarized. If macOS blocks the first launch, run
+      xattr -dr com.apple.quarantine /Applications/Backlot.app
+    or use Open Anyway in System Settings > Privacy & Security after the
+    first attempt.
 
     PDF printing needs Google Chrome. Script and budget engines are optional;
     see the README for BACKLOT_SCRIPT_PY and BACKLOT_BUDGET_PY.
