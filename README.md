@@ -6,10 +6,11 @@ Backlot is a local production office for indie features: budget, script breakdow
 
 ```bash
 brew tap MIM18-code/backlot
+brew trust MIM18-code/backlot
 brew install --cask --no-quarantine backlot
 ```
 
-`--no-quarantine` matters. The build is unsigned and not notarized, so without it macOS blocks the first launch until you use Open Anyway in System Settings > Privacy & Security.
+Recent Homebrew refuses casks from third-party taps until you trust the tap once; that is the second line. `--no-quarantine` matters. The build is unsigned and not notarized, so without it macOS blocks the first launch until you use Open Anyway in System Settings > Privacy & Security.
 
 Apple Silicon and macOS 13 or later. Upgrade with `brew upgrade --cask backlot`. Remove with `brew uninstall --cask backlot`; add `--zap` to also delete `~/.backlot`.
 
