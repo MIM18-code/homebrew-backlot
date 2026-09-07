@@ -8,7 +8,7 @@ cask "backlot" do
   homepage "https://github.com/MIM18-code/homebrew-backlot"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Backlot.app"
 
