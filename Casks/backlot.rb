@@ -1,6 +1,6 @@
 cask "backlot" do
-  version "0.5.0"
-  sha256 "9fa2f6f1d39e5c61a0aded8388bbd9a133974f6e07cc389d065177c9818ac532"
+  version "0.5.1"
+  sha256 "b56d5a4ae003cbed8a116e6ac55269bb1ccd76f2770adcc541a8c7dd1ae270df"
 
   url "https://github.com/MIM18-code/homebrew-backlot/releases/download/v#{version}/Backlot-#{version}.dmg"
   name "Backlot"
@@ -18,7 +18,7 @@ cask "backlot" do
   ]
 
   caveats <<~EOS
-    Backlot is not signed or notarized. If macOS blocks the first launch, run
+    Backlot is signed ad hoc, not notarized. If macOS blocks the first launch, run
       xattr -dr com.apple.quarantine /Applications/Backlot.app
     or use Open Anyway in System Settings > Privacy & Security after the
     first attempt.
