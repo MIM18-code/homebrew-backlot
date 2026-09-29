@@ -1,6 +1,6 @@
 cask "backlot" do
-  version "0.5.1"
-  sha256 "b56d5a4ae003cbed8a116e6ac55269bb1ccd76f2770adcc541a8c7dd1ae270df"
+  version "0.6.0"
+  sha256 "44045df10c3985a98d8c1ac485f5ab99fe47b6cb4dc5e05fe3a3993f54ef3787"
 
   url "https://github.com/MIM18-code/homebrew-backlot/releases/download/v#{version}/Backlot-#{version}.dmg"
   name "Backlot"
