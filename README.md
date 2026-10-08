@@ -8,10 +8,9 @@ Backlot is a local production office for indie features: budget, script breakdow
 brew tap MIM18-code/backlot
 brew trust MIM18-code/backlot
 brew install --cask backlot
-xattr -dr com.apple.quarantine /Applications/Backlot.app
 ```
 
-Recent Homebrew refuses casks from third-party taps until you trust the tap once; that is the second line. The build is signed ad hoc but not notarized, and Homebrew 6 no longer offers a no-quarantine option, so the last line clears the quarantine flag. Skip it and macOS blocks the first launch until you use Open Anyway in System Settings > Privacy & Security.
+Recent Homebrew refuses casks from third-party taps until you trust the tap once; that is the second line. Since 0.7.0 beta 1 the app is signed with MindInMotion LLC's Developer ID and notarized by Apple, so it opens on first launch with no extra step.
 
 Apple Silicon and macOS 13 or later. Upgrade with `brew upgrade --cask backlot`. Remove with `brew uninstall --cask backlot`; add `--zap` to also delete `~/.backlot`.
 
@@ -29,6 +28,6 @@ The app checks these at startup and says what is missing.
 
 ## How releases land here
 
-The DMG is built from the private source repository with `npm run app:build`, uploaded to a release on this repository tagged `v<version>`, and `scripts/homebrew-cask.mjs` writes `Casks/backlot.rb` with the matching sha256.
+The DMG is built, signed and notarized from the private source repository with `npm run release:prepare`, uploaded to a release on this repository tagged `v<version>`, and `scripts/homebrew-cask.mjs` writes `Casks/backlot.rb` with the matching sha256.
 
 Each release also carries the source archives for the bundled runtime (Electron, Chromium, Chromium's FFmpeg fork and NASM) and a `SHA256SUMS` file. Backlot's license and third-party notices ship inside the app.
