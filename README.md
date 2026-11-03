@@ -22,9 +22,15 @@ Apple Silicon and macOS 13 or later. Upgrade with `brew upgrade --cask backlot`.
 | FDX and Fountain reading, breakdown import, sides | The screenwriting engine and its Python environment, `BACKLOT_SCRIPT_PY` if the interpreter is not `~/screenwriting-mcp-venv/bin/python` |
 | Gorilla workbooks and Movie Magic XML | The film-budget engine, `BACKLOT_BUDGET_PY` likewise |
 | Email | A Resend account or Google Workspace OAuth client |
-| AI assists | Local Ollama or your own API key |
+| AI assists | Local Ollama, your ChatGPT plan, or your own API key |
 
 The app checks these at startup and says what is missing.
+
+## User guide
+
+[Read the Backlot guide](https://mindinmotionsoftware.com/guides/backlot/index.html) for setup, screenshots, captioned walkthroughs and troubleshooting. You can also [download the complete guide](https://mindinmotionsoftware.com/downloads/Backlot-user-guide.zip) to read it and watch the videos offline.
+
+Start with an empty practice project and enter a scene manually. That works without AI or external engines. The current installer does not supply the script and budget engines or an in-app installer for them. Import is unavailable without the script engine; changing from FDX to Fountain does not fix that.
 
 ## How releases land here
 

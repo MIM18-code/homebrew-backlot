@@ -4,7 +4,7 @@ cask "backlot" do
 
   url "https://github.com/MIM18-code/homebrew-backlot/releases/download/v#{version}/Backlot-#{version}.dmg"
   name "Backlot"
-  desc "Local production office: budget, breakdown, stripboard, DOOD, call sheets, with an MCP server"
+  desc "Production office for film budgets, breakdowns, schedules and call sheets"
   homepage "https://github.com/MIM18-code/homebrew-backlot"
 
   depends_on arch: :arm64
@@ -18,7 +18,9 @@ cask "backlot" do
   ]
 
   caveats <<~EOS
-    PDF printing needs Google Chrome. Script and budget engines are optional;
-    see the README for BACKLOT_SCRIPT_PY and BACKLOT_BUDGET_PY.
+    Start with manual scene entry; no AI or extra downloads are required.
+    Script import needs a separate engine not supplied by this installer.
+    PDF printing needs Google Chrome. Setup and troubleshooting:
+      https://mindinmotionsoftware.com/guides/backlot/index.html
   EOS
 end
