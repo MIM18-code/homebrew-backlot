@@ -14,23 +14,25 @@ Recent Homebrew refuses casks from third-party taps until you trust the tap once
 
 Apple Silicon and macOS 13 or later. Upgrade with `brew upgrade --cask backlot`. Remove with `brew uninstall --cask backlot`; add `--zap` to also delete `~/.backlot`.
 
-## Optional prerequisites
+## Included and optional features
+
+Beta 8 includes script import, scene reading, actor sides, tagged FDX export and
+desktop PDF output. Those workflows need no Python environment, separate Chrome
+installation or AI account.
 
 | Capability | Needs |
 | --- | --- |
-| PDF printing and issuing call sheets | Google Chrome |
-| FDX and Fountain reading, breakdown import, sides | The screenwriting engine and its Python environment, `BACKLOT_SCRIPT_PY` if the interpreter is not `~/screenwriting-mcp-venv/bin/python` |
-| Gorilla workbooks and Movie Magic XML | The film-budget engine, `BACKLOT_BUDGET_PY` likewise |
+| Gorilla workbooks and Movie Magic budget/schedule XML | A compatible separately configured budget integration; formats are disabled when unavailable |
 | Email | A Resend account or Google Workspace OAuth client |
 | AI assists | Local Ollama, your ChatGPT plan, or your own API key |
 
-The app checks these at startup and says what is missing.
+PDF and CSV exports work without those optional integrations.
 
 ## User guide
 
 [Read the Backlot guide](https://mindinmotionsoftware.com/guides/backlot/index.html) for setup, screenshots, captioned walkthroughs and troubleshooting. You can also [download the complete guide](https://mindinmotionsoftware.com/downloads/Backlot-user-guide.zip) to read it and watch the videos offline.
 
-Start with an empty practice project and enter a scene manually. That works without AI or external engines. The current installer does not supply the script and budget engines or an in-app installer for them. Import is unavailable without the script engine; changing from FDX to Fountain does not fix that.
+Start with an empty practice project and import an FDX or Fountain screenplay, or enter a scene manually. The guide includes fictional scripts to try. No external engine or AI setup is needed.
 
 ## How releases land here
 
