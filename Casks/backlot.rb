@@ -7,6 +7,12 @@ cask "backlot" do
   desc "Production office for film budgets, breakdowns, schedules and call sheets"
   homepage "https://github.com/MIM18-code/homebrew-backlot"
 
+  livecheck do
+    url "https://github.com/MIM18-code/homebrew-backlot/releases/latest"
+    regex(%r{/tag/v?(\d+(?:\.\d+)+(?:-beta\.\d+)?)$}i)
+    strategy :header_match
+  end
+
   depends_on arch: :arm64
   depends_on macos: :ventura
 
